@@ -1,5 +1,6 @@
 // Declarações básicas.
 #include <iostream>
+#include <locale.h>
 
 using namespace std;
 
@@ -16,6 +17,10 @@ using namespace std;
 
 int main()
 {
+    // para poder usar acentos nas palavras
+
+    setlocale(LC_ALL, "pt_BR.UTF-8");
+
     // Definição de variaveis.
 
     long long int Barcode;
@@ -87,7 +92,7 @@ int main()
 
     else if (comprimento >= 13)
     {
-        cout << BRED << "Seu Código de Barras muito longo\t" << NC;
+        cout << BRED << "Seu Código de Barras é muito longo\t" << NC;
     }
 
     // Se nenhuma das verificações acima detectar um erro, ele reprova o código de barras.
